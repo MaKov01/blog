@@ -191,6 +191,7 @@ li {
   .section-container {
     width: 100%;
     display: inline-block;
+    height: 100vh;
   }
 
   .section {
