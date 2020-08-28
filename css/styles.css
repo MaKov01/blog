@@ -182,6 +182,7 @@ li {
   .section {
     width: 100%;
     padding: 0;
+    margin-bottom: 20px;
   }
   .section-article {
     width: 100%;
@@ -203,7 +204,7 @@ li {
   .card-1 {
     margin-top: 15px;
     padding: 10px 0;
-    width: 105%;
+    width: 80%;
   }
 
   .card-1 img {
@@ -306,7 +307,7 @@ li {
   .card-1 {
     margin-top: 15px;
     padding: 10px 0;
-    width: 105%;
+    width: 80%;
   }
 
   .card-1 img {

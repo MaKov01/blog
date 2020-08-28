@@ -15,6 +15,7 @@ body{
   justify-content: center;
   align-items: center;
   margin: 10px auto 258px auto;
+  text-align: left;
 }
 .img-1,
 .img-2 {
