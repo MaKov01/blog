@@ -20,7 +20,7 @@
   border-radius: 1em;
   padding: 4px;
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .img-1 img,
   .img-2 img {
     width: 350px;
