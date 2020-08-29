@@ -19,18 +19,18 @@ router.post("/send-email", async (req, res) => {
   const testUser = await nodemailer.createTestAccount();
   console.log(testUser)
   const transporter = nodemailer.createTransport({
-    host: "smtp.ethereal.email",
+    host: "smtp.google.com",
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: testUser.user, // generated ethereal user
-      pass: testUser.pass, // generated ethereal password
+      user: "makox.me@gmail.com", // generated ethereal user
+      pass: "Valentin3112", // generated ethereal password
     }
   });
 
   const info = await transporter.sendMail({
     from: '"Fred Foo 👻" <foo@example.com>',
-    to: "valentincaligiuri@yahoo.com",
+    to: "makox.coder@gmail.com",
     subject: "Website contact form",
     html: contentHTML
   });
