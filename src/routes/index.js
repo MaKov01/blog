@@ -16,28 +16,26 @@ router.post("/send-email", async (req, res) => {
 
   `;
 
-
+  const testUser = await nodemailer.createTestAccount();
+  console.log(testUser)
   const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true, // true for 465, false for other ports
+    host: "smtp.ethereal.email",
+    port: 587,
+    secure: false, // true for 465, false for other ports
     auth: {
-      user: 'makox.coder@gmail.com', // generated ethereal user
-      pass: 'Valentin3112', // generated ethereal password
-    },
-    tls: {
-        rejectUnauthorized: false
+      user: testUser.user, // generated ethereal user
+      pass: testUser.pass, // generated ethereal password
     }
   });
 
   const info = await transporter.sendMail({
-    from: "'MaKo Blog Server'<makox.me@gmail.com>",
-    to: "makox.coder@gmail.com",
+    from: '"Fred Foo 👻" <foo@example.com>',
+    to: "valentincaligiuri@yahoo.com",
     subject: "Website contact form",
     html: contentHTML
   });
 
-  console.log('Message send', info.messageID);
+  console.log("Message sent: %s", info.messageId);
 
   res.redirect('/enviado.html');
 });
