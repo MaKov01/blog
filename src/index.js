@@ -8,4 +8,5 @@ app.use(express.json());
 
 app.use(require("./routes/index"));
 app.use(express.static(path.join(__dirname, "public")));
-app.listen(22560)
+var port_number = app.listen(process.env.PORT || 3000);
+app.listen(port_number);
