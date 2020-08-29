@@ -35,10 +35,11 @@
         <article class="section-article">
           <div class="section-article__info">
             <div class="section-article__info-1">
-              <form class="form">
-                <input type="text" required/>
-                <textarea class="msg" required></textarea>
-                <input type="submit" />
+              <form class="form" action="/email-send" method="POST">
+                <input type="text" id="name" name="name" placeholder="Nombre" required/>
+                <input type="email" id="email" name="email" placeholder="Email" required/>
+                <textarea class="msg" id="message" name="message" placeholder="Mensaje"></textarea>
+                <input type="submit" id="submit" />
               </form>
             </div>
           </div>
