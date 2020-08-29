@@ -22,7 +22,7 @@ router.post("/send-email", async (req, res) => {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: 'makox.me@gmail.com', // generated ethereal user
+      user: 'makox.coder@gmail.com', // generated ethereal user
       pass: 'Valentin3112', // generated ethereal password
     },
     tls: {
