@@ -21,7 +21,7 @@
   "homepage": "https://github.com/MaKov01/blog#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "nodemailer": "^6.4.11"
+    "nodemailer": "^6.4.16"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
