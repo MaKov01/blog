@@ -17,28 +17,26 @@ router.post("/send-email", async (req, res) => {
   `;
 
   const transporter = nodemailer.createTransport({
+    pool: true,
     host: "smtp.gmail.com",
     port: 465,
-    secure: true,
+    secure: true, // use TLS
     auth: {
-      user: "makox.me@gmail.com", // generated ethereal user
-      pass: "2092006xd", // generated ethereal password
+      user: "makox.me@gmail.com",
+      pass: "2092006xd",
     },
-    tsl: {
-      rejectUnauthorized: false
-    }
   });
 
   const info = await transporter.sendMail({
     from: '"Fred Foo 👻" <foo@example.com>',
     to: "makox.coder@gmail.com",
     subject: "Website contact form",
-    html: contentHTML
+    html: contentHTML,
   });
 
   console.log("Message sent: %s", info.messageId);
 
-  res.redirect('/enviado.html');
+  res.redirect("/enviado.html");
 });
 
 module.exports = router;
