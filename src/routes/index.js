@@ -22,7 +22,7 @@ router.post("/send-email", async (req, res) => {
     secure: true,
     auth: {
       user: "makox.me@gmail.com", // generated ethereal user
-      pass: "Valentin3112", // generated ethereal password
+      pass: "2092006xd", // generated ethereal password
     },
     tsl: {
       rejectUnauthorized: false
